@@ -170,7 +170,17 @@
 import mongoose from "mongoose";
 
 // establish connection
+const uri = "mongodb+srv://Admin1234:Admin1234@cluster0.yywvzaq.mongodb.net/";
+async function main() {
+    try {
+        await mongoose.connect(uri);
+        console.log("Connected to MongoDB via Mongoose");
+    } catch (err) {
+        console.error("MongoDB connection error:", err);
+    }
+}
 
+main();
 
 // define schema
 
